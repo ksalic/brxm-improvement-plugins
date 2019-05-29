@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /content/uid-generation:
+      jcr:primaryType: uidgeneration:container
+      uidgeneration:counter: 1
+      uidgeneration:format: "%08d"

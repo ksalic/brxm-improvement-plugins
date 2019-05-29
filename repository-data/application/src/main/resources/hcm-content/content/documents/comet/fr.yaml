@@ -1,0 +1,176 @@
+/content/documents/comet/fr:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 305148c2-a5d9-448c-9f18-dd1dba54ed32
+  hippo:name: FR
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 1d64a573-f9fe-464e-ad71-6b852533bdd1
+  hippotranslation:locale: fr
+  /account-maintenance-fr:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 9424a313-5112-457f-bf4e-ec9aaf24a8e5
+    hippo:name: Account Maintenance FR
+    hippostd:foldertype: []
+    hippotranslation:id: 03afa54d-e573-4087-b363-9d150642ed1a
+    hippotranslation:locale: fr
+    /index:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e26a862f-5a7d-4767-9ba8-1d548a486d16
+      hippo:versionHistory: 1de573d6-e260-45f1-9e97-9d5e3039c926
+      /index[1]:
+        jcr:primaryType: myproject:index
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 95de8273-5aab-4390-a62b-03eaf171bb3b
+        hippo:availability: []
+        hippostd:state: draft
+        hippostdpubwf:createdBy: system
+        hippostdpubwf:creationDate: 2019-05-27T19:50:56.966+02:00
+        hippostdpubwf:lastModificationDate: 2019-05-27T19:50:56.966+02:00
+        hippostdpubwf:lastModifiedBy: system
+        hippotranslation:id: 6f496971-64af-44f7-8803-d677bc9ed3e6
+        hippotranslation:locale: fr
+        myproject:overview: <p>Automatically populated Index Overview</p>
+        myproject:title: Automatically populated Index Title
+      /index[2]:
+        jcr:primaryType: myproject:index
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: ffdc34b6-3dc8-447b-9e8a-0b20c37d57e6
+        hippo:availability: [preview]
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: system
+        hippostdpubwf:creationDate: 2019-05-27T19:50:56.966+02:00
+        hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.014+02:00
+        hippostdpubwf:lastModifiedBy: system
+        hippotranslation:id: 6f496971-64af-44f7-8803-d677bc9ed3e6
+        hippotranslation:locale: fr
+        myproject:overview: <p>Automatically populated Index Overview</p>
+        myproject:title: Automatically populated Index Title
+      /index[3]:
+        jcr:primaryType: myproject:index
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b577ff11-8bba-47f5-af5b-c5fe3f8aeaa4
+        hippo:availability: [live]
+        hippostd:state: published
+        hippostdpubwf:createdBy: system
+        hippostdpubwf:creationDate: 2019-05-27T19:50:56.966+02:00
+        hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.014+02:00
+        hippostdpubwf:lastModifiedBy: system
+        hippostdpubwf:publicationDate: 2019-05-27T19:50:57.072+02:00
+        hippotranslation:id: 6f496971-64af-44f7-8803-d677bc9ed3e6
+        hippotranslation:locale: fr
+        myproject:overview: <p>Automatically populated Index Overview</p>
+        myproject:title: Automatically populated Index Title
+    /cards-fr:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: 40f5c000-5682-40b4-aae5-d76b38c4674d
+      hippo:name: Cards FR
+      hippostd:foldertype: []
+      hippotranslation:id: 9e25b281-087c-495c-a0c1-e483d7ba14f6
+      hippotranslation:locale: fr
+      /index:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: a482680d-b570-4f64-9fb2-b67f4947788e
+        hippo:versionHistory: 9f8bceca-76c3-47b0-9fe0-fa4d43937bb3
+        /index[1]:
+          jcr:primaryType: myproject:index
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: a02af5f0-2342-4d4c-ac7d-2dd358f4e997
+          hippo:availability: []
+          hippostd:state: draft
+          hippostdpubwf:createdBy: system
+          hippostdpubwf:creationDate: 2019-05-27T19:50:57.157+02:00
+          hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.157+02:00
+          hippostdpubwf:lastModifiedBy: system
+          hippotranslation:id: 466860e7-1233-4380-885d-f5f260f6845b
+          hippotranslation:locale: fr
+          myproject:overview: <p>Automatically populated Index Overview</p>
+          myproject:title: Automatically populated Index Title
+        /index[2]:
+          jcr:primaryType: myproject:index
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 9a856db1-33bb-4136-ab16-e9b3d7f1ea15
+          hippo:availability: [preview]
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: system
+          hippostdpubwf:creationDate: 2019-05-27T19:50:57.157+02:00
+          hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.210+02:00
+          hippostdpubwf:lastModifiedBy: system
+          hippotranslation:id: 466860e7-1233-4380-885d-f5f260f6845b
+          hippotranslation:locale: fr
+          myproject:overview: <p>Automatically populated Index Overview</p>
+          myproject:title: Automatically populated Index Title
+        /index[3]:
+          jcr:primaryType: myproject:index
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: db9fa550-0d36-453b-a007-7dede613b6f3
+          hippo:availability: [live]
+          hippostd:state: published
+          hippostdpubwf:createdBy: system
+          hippostdpubwf:creationDate: 2019-05-27T19:50:57.157+02:00
+          hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.210+02:00
+          hippostdpubwf:lastModifiedBy: system
+          hippostdpubwf:publicationDate: 2019-05-27T19:50:57.297+02:00
+          hippotranslation:id: 466860e7-1233-4380-885d-f5f260f6845b
+          hippotranslation:locale: fr
+          myproject:overview: <p>Automatically populated Index Overview</p>
+          myproject:title: Automatically populated Index Title
+      /card-replacement-fr:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: 510af708-64b0-47b8-a9b4-6cf30d5f110e
+        hippo:name: Card Replacement FR
+        hippostd:foldertype: []
+        hippotranslation:id: 6142022b-8d1f-4942-a602-bed1d809e5ef
+        hippotranslation:locale: fr
+        /index:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 3a1a8355-1e9b-4359-9bfb-1697d8674182
+          hippo:versionHistory: 423e5f11-b016-4bcb-8391-e95c0b965129
+          /index[1]:
+            jcr:primaryType: myproject:index
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 1e827623-bb56-433a-b17e-ba9512b0fc61
+            hippo:availability: []
+            hippostd:state: draft
+            hippostdpubwf:createdBy: system
+            hippostdpubwf:creationDate: 2019-05-27T19:50:57.371+02:00
+            hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.372+02:00
+            hippostdpubwf:lastModifiedBy: system
+            hippotranslation:id: c4a77e05-9994-4fa0-b51d-fefd264dcf7a
+            hippotranslation:locale: fr
+            myproject:overview: <p>Automatically populated Index Overview</p>
+            myproject:title: Automatically populated Index Title
+          /index[2]:
+            jcr:primaryType: myproject:index
+            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+            jcr:uuid: b308644a-aa7c-43f7-9592-824e00693bfe
+            hippo:availability: [preview]
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: system
+            hippostdpubwf:creationDate: 2019-05-27T19:50:57.371+02:00
+            hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.422+02:00
+            hippostdpubwf:lastModifiedBy: system
+            hippotranslation:id: c4a77e05-9994-4fa0-b51d-fefd264dcf7a
+            hippotranslation:locale: fr
+            myproject:overview: <p>Automatically populated Index Overview</p>
+            myproject:title: Automatically populated Index Title
+          /index[3]:
+            jcr:primaryType: myproject:index
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 7cf82579-1c06-4e9b-9dd7-b78d0dbc14bc
+            hippo:availability: [live]
+            hippostd:state: published
+            hippostdpubwf:createdBy: system
+            hippostdpubwf:creationDate: 2019-05-27T19:50:57.371+02:00
+            hippostdpubwf:lastModificationDate: 2019-05-27T19:50:57.422+02:00
+            hippostdpubwf:lastModifiedBy: system
+            hippostdpubwf:publicationDate: 2019-05-27T19:50:57.508+02:00
+            hippotranslation:id: c4a77e05-9994-4fa0-b51d-fefd264dcf7a
+            hippotranslation:locale: fr
+            myproject:overview: <p>Automatically populated Index Overview</p>
+            myproject:title: Automatically populated Index Title

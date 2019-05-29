@@ -1,0 +1,5 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/taxonomypostpublication:
+      jcr:primaryType: hipposys:module
+      hipposys:className: org.example.TaxonomyWorkflowListener.TaxonomyWorkflowListener

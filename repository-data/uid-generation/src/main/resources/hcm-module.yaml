@@ -1,0 +1,5 @@
+group: hippo-cms
+project:
+  name: hippo-plugin-uid-generation
+  after: hippo-cms
+module: hippo-plugin-uid-generation

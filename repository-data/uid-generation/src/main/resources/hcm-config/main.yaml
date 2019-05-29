@@ -1,0 +1,11 @@
+definitions:
+  namespace:
+    uidgeneration:
+      uri: http://uidgeneration.bloomreach.com/uidgeneration/nt/1.1
+      cnd: uid-generation.cnd
+  config:
+    /hippo:configuration/hippo:modules/autoexport/hippo:moduleconfig:
+      autoexport:excluded:
+        operation: add
+        type: string
+        value: [/content/uid-generation]

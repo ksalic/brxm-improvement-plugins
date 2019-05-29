@@ -1,0 +1,5 @@
+/content/documents/comet:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['mix:versionable']
+  jcr:uuid: 8ddd1b34-29f1-4512-96d9-d3935fd0126e
+  hippostd:foldertype: [new-document, new-folder]

@@ -1,0 +1,143 @@
+/content/taxonomies:
+  jcr:primaryType: hippotaxonomy:container
+  /topics:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: 1739c175-1c6f-4097-bd50-bc8eae17b3d8
+    /topics[1]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
+      jcr:uuid: 5d3110f7-2ff7-4ba6-bcac-fb2311861887
+      hippo:availability: [live]
+      hippostd:holder: admin
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2019-05-23T09:48:24.101+01:00
+      hippostdpubwf:lastModificationDate: 2019-05-27T18:44:38.520+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2019-05-27T19:50:56.825+02:00
+      hippotaxonomy:locales: [en, fr]
+      /account-maintenance-fr:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: account-maintenance
+        /hippotaxonomy:categoryinfos:
+          jcr:primaryType: hippotaxonomy:categoryinfos
+          /en:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Account Maintenance
+          /fr:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Account Maintenance FR
+            hippotaxonomy:synonyms: []
+        /cards-fr:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cards
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /fr:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Cards FR
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Cards
+          /card-replacement-fr:
+            jcr:primaryType: hippotaxonomy:category
+            hippotaxonomy:key: card-replacement
+            /hippotaxonomy:categoryinfos:
+              jcr:primaryType: hippotaxonomy:categoryinfos
+              /en:
+                jcr:primaryType: hippotaxonomy:categoryinfo
+                hippotaxonomy:name: Card Replacement
+              /fr:
+                jcr:primaryType: hippotaxonomy:categoryinfo
+                hippotaxonomy:name: Card Replacement FR
+    /topics[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 0e757d59-8a76-496e-904c-0afd44409e4e
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2019-05-23T09:48:24.101+01:00
+      hippostdpubwf:lastModificationDate: 2019-05-27T18:44:38.520+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:locales: [en, fr]
+      /account-maintenance-fr:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: account-maintenance
+        /hippotaxonomy:categoryinfos:
+          jcr:primaryType: hippotaxonomy:categoryinfos
+          /en:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Account Maintenance
+          /fr:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Account Maintenance FR
+            hippotaxonomy:synonyms: []
+        /cards-fr:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cards
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /fr:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Cards FR
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Cards
+          /card-replacement-fr:
+            jcr:primaryType: hippotaxonomy:category
+            hippotaxonomy:key: card-replacement
+            /hippotaxonomy:categoryinfos:
+              jcr:primaryType: hippotaxonomy:categoryinfos
+              /en:
+                jcr:primaryType: hippotaxonomy:categoryinfo
+                hippotaxonomy:name: Card Replacement
+              /fr:
+                jcr:primaryType: hippotaxonomy:categoryinfo
+                hippotaxonomy:name: Card Replacement FR
+    /topics[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: bd8de8af-14cc-4ebf-b6db-3abede90cd8f
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2019-05-23T09:48:24.101+01:00
+      hippostdpubwf:lastModificationDate: 2019-05-27T18:42:26.482+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:locales: [en, fr]
+      /account-maintenance-fr:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: account-maintenance
+        /hippotaxonomy:categoryinfos:
+          jcr:primaryType: hippotaxonomy:categoryinfos
+          /en:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Account Maintenance
+          /fr:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Account Maintenance FR
+            hippotaxonomy:synonyms: []
+        /cards-fr:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cards
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /fr:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Cards FR
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Cards
+          /card-replacement-fr:
+            jcr:primaryType: hippotaxonomy:category
+            hippotaxonomy:key: card-replacement
+            /hippotaxonomy:categoryinfos:
+              jcr:primaryType: hippotaxonomy:categoryinfos
+              /en:
+                jcr:primaryType: hippotaxonomy:categoryinfo
+                hippotaxonomy:name: Card Replacement
+              /fr:
+                jcr:primaryType: hippotaxonomy:categoryinfo
+                hippotaxonomy:name: Card Replacement FR
