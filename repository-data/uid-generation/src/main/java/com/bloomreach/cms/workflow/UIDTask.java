@@ -39,7 +39,7 @@ public class UIDTask extends AbstractDocumentTask {
                 session.refresh(true);
                 generateAndUpdateUID(draft, session);
             } catch (AlreadyLockedException e) {
-                log.info("'{}' is already locked", COUNTER, e);
+                log.warn("'{}' is already locked", COUNTER, e);
 //                try {
 ////                    LockManagerUtils.waitForLock(lockManager, COUNTER, 500, 1000 * 5);
 ////                    doExecute(); try again?
