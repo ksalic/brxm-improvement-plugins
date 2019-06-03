@@ -27,9 +27,7 @@ public class UIDTask extends AbstractDocumentTask {
 
     @Override
     protected Object doExecute() throws RepositoryException {
-
         Node draft = getDocumentHandle().getDocuments().get("draft").getNode();
-
         if (!draft.hasProperty(ID_PROPERY)) {
             try (LockResource ignore = lockManager.lock(COUNTER)) {
                 Session session = getWorkflowContext().getInternalWorkflowSession();
