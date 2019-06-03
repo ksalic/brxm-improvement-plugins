@@ -1,12 +1,9 @@
 package com.bloomreach.cms.workflow;
 
-import java.rmi.RemoteException;
-
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
-import org.hippoecm.repository.api.WorkflowException;
 import org.onehippo.cms7.services.HippoServiceRegistry;
 import org.onehippo.cms7.services.lock.AlreadyLockedException;
 import org.onehippo.cms7.services.lock.LockException;
@@ -23,7 +20,7 @@ public class UIDTask extends AbstractDocumentTask {
     private static final String COUNTER = "/content/uid-generation";
     private static final String COUNTER_PROPERTY = "uidgeneration:counter";
     private static final String ID_PROPERY = "uidgeneration:id";
-    private static final String FORMAT_PROPERY = "uidgeneration:format";
+    private static final String FORMAT_PROPERTY = "uidgeneration:format";
     private static final String MIXIN = "uidgeneration:identifable";
 
     private final LockManager lockManager = HippoServiceRegistry.getService(LockManager.class);
@@ -60,7 +57,7 @@ public class UIDTask extends AbstractDocumentTask {
 
         Node uidGeneration = session.getNode(COUNTER);
         long id = uidGeneration.getProperty(COUNTER_PROPERTY).getLong();
-        String format = uidGeneration.getProperty(FORMAT_PROPERY).getString();
+        String format = uidGeneration.getProperty(FORMAT_PROPERTY).getString();
         long docUid = id++;
         draft.setProperty(ID_PROPERY, String.format(format, docUid));
         draft.getSession().save();
