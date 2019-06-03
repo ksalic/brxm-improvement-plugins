@@ -1,54 +1,50 @@
 package com.bloomreach.cms.workflow;
 
 import javax.jcr.Node;
+import javax.jcr.RepositoryException;
+import javax.jcr.Session;
 
-import org.apache.commons.scxml2.ActionExecutionContext;
-import org.easymock.EasyMock;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.onehippo.cms7.services.lock.LockException;
-import org.onehippo.cms7.services.lock.LockManager;
-import org.onehippo.cms7.services.lock.LockResource;
-import org.onehippo.repository.documentworkflow.DocumentHandle;
 import org.onehippo.repository.mock.MockNode;
+
+import static org.junit.Assert.assertTrue;
 
 @Ignore
 public class UIDTaskTest {
 
     @Test
-    public void doExecute() throws LockException {
+    public void doExecute() throws RepositoryException {
+        UIDAction action = new UIDAction();
+        UIDTask workflowTask = action.createWorkflowTask();
 
-        DocumentHandle handle = EasyMock.createNiceMock(DocumentHandle.class);
-        LockManager lockManager = EasyMock.createNiceMock(LockManager.class);
-        LockResource lockResource = EasyMock.createNiceMock(LockResource.class);
+        assertTrue(workflowTask instanceof UIDTask);
 
-        Node draft = new MockNode("draft") ;
-        Node key = new MockNode("idgenerator") ;
+        MockNode root = MockNode.root();
+        Session session = root.getSession();
 
-        EasyMock.expect(handle.getDocuments().get("draft").getNode()).andReturn(draft).anyTimes();
-        EasyMock.expect(lockManager.lock("/content/uid-generation")).andReturn(lockResource).anyTimes();
+        Node draft1 = new MockNode("draft1");
+        Node draft2 = new MockNode("draft2");
+        Node key = new MockNode("uid-generation", "uidgeneration:container");
+        key.setProperty("uidgeneration:counter", 1);
+        key.setProperty("uidgeneration:format", "%08d");
+        MockNode content = new MockNode("content");
+
+        content.addNode((MockNode)key);
+
+        root.addNode((MockNode)draft1);
+        root.addNode((MockNode)draft2);
+        root.addNode(content);
 
 
+        workflowTask.generateAndUpdateUID(draft1, session);
+        workflowTask.generateAndUpdateUID(draft2, session);
 
-        UIDTask task = new UIDTask() {
+        assertTrue(draft1.isNodeType("uidgeneration:identifable"));
+        assertTrue(draft1.getProperty("uidgeneration:id").getString().equals("00000001"));
 
-            @Override
-            LockManager getLockManager() {
-                return super.getLockManager();
-            }
-
-            @Override
-            public DocumentHandle getDocumentHandle() {
-                return super.getDocumentHandle();
-            }
-        };
-
-        try {
-            task.doExecute();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //check value
+        assertTrue(draft2.isNodeType("uidgeneration:identifable"));
+        assertTrue(draft2.getProperty("uidgeneration:id").getString().equals("00000002"));
     }
 }

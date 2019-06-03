@@ -29,30 +29,15 @@ public class UIDTask extends AbstractDocumentTask {
     private final LockManager lockManager = HippoServiceRegistry.getService(LockManager.class);
 
     @Override
-    protected Object doExecute() throws WorkflowException, RepositoryException, RemoteException {
+    protected Object doExecute() throws RepositoryException {
 
         Node draft = getDocumentHandle().getDocuments().get("draft").getNode();
 
         if (!draft.hasProperty(ID_PROPERY)) {
-            try (LockResource ignore = getLockManager().lock(COUNTER)) {
-                // session.refresh(true|false) is JCR nodes are involved
-                // Do work
+            try (LockResource ignore = lockManager.lock(COUNTER)) {
                 Session session = getWorkflowContext().getInternalWorkflowSession();
                 session.refresh(true);
-
-                if (!draft.isNodeType(MIXIN)) {
-                    draft.addMixin(MIXIN);
-                }
-
-                Node uidGeneration = session.getNode(COUNTER);
-                long id = uidGeneration.getProperty(COUNTER_PROPERTY).getLong();
-                String format = uidGeneration.getProperty(FORMAT_PROPERY).getString();
-                long docUid = id++;
-                draft.setProperty(ID_PROPERY, String.format(format, docUid));
-                draft.getSession().save();
-
-                uidGeneration.setProperty(COUNTER_PROPERTY, id);
-                session.save();
+                generateAndUpdateUID(draft, session);
             } catch (AlreadyLockedException e) {
                 log.info("'{}' is already locked", COUNTER, e);
 //                try {
@@ -65,13 +50,24 @@ public class UIDTask extends AbstractDocumentTask {
                 log.error("Exception while trying to obtain lock", e);
             }
         }
-
-
         return null;
     }
 
-    LockManager getLockManager() {
-        return lockManager;
+    protected void generateAndUpdateUID(final Node draft, final Session session) throws RepositoryException {
+        if (!draft.isNodeType(MIXIN)) {
+            draft.addMixin(MIXIN);
+        }
+
+        Node uidGeneration = session.getNode(COUNTER);
+        long id = uidGeneration.getProperty(COUNTER_PROPERTY).getLong();
+        String format = uidGeneration.getProperty(FORMAT_PROPERY).getString();
+        long docUid = id++;
+        draft.setProperty(ID_PROPERY, String.format(format, docUid));
+        draft.getSession().save();
+
+        uidGeneration.setProperty(COUNTER_PROPERTY, id);
+        session.save();
     }
+
 
 }
