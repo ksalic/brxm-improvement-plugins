@@ -21,7 +21,7 @@
       hippo:versionHistory: 1de573d6-e260-45f1-9e97-9d5e3039c926
       /index[1]:
         jcr:primaryType: myproject:index
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
         jcr:uuid: 95de8273-5aab-4390-a62b-03eaf171bb3b
         hippo:availability: []
         hippostd:state: draft
@@ -35,7 +35,7 @@
         myproject:title: Automatically populated Index Title
       /index[2]:
         jcr:primaryType: myproject:index
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs']
         jcr:uuid: ffdc34b6-3dc8-447b-9e8a-0b20c37d57e6
         hippo:availability: [preview]
         hippostd:state: unpublished
@@ -49,7 +49,7 @@
         myproject:title: Automatically populated Index Title
       /index[3]:
         jcr:primaryType: myproject:index
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
         jcr:uuid: b577ff11-8bba-47f5-af5b-c5fe3f8aeaa4
         hippo:availability: [live]
         hippostd:state: published
@@ -77,7 +77,7 @@
         hippo:versionHistory: 9f8bceca-76c3-47b0-9fe0-fa4d43937bb3
         /index[1]:
           jcr:primaryType: myproject:index
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
           jcr:uuid: a02af5f0-2342-4d4c-ac7d-2dd358f4e997
           hippo:availability: []
           hippostd:state: draft
@@ -91,7 +91,7 @@
           myproject:title: Automatically populated Index Title
         /index[2]:
           jcr:primaryType: myproject:index
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs']
           jcr:uuid: 9a856db1-33bb-4136-ab16-e9b3d7f1ea15
           hippo:availability: [preview]
           hippostd:state: unpublished
@@ -105,7 +105,7 @@
           myproject:title: Automatically populated Index Title
         /index[3]:
           jcr:primaryType: myproject:index
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
           jcr:uuid: db9fa550-0d36-453b-a007-7dede613b6f3
           hippo:availability: [live]
           hippostd:state: published
@@ -133,7 +133,7 @@
           hippo:versionHistory: 423e5f11-b016-4bcb-8391-e95c0b965129
           /index[1]:
             jcr:primaryType: myproject:index
-            jcr:mixinTypes: ['mix:referenceable']
+            jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
             jcr:uuid: 1e827623-bb56-433a-b17e-ba9512b0fc61
             hippo:availability: []
             hippostd:state: draft
@@ -147,7 +147,7 @@
             myproject:title: Automatically populated Index Title
           /index[2]:
             jcr:primaryType: myproject:index
-            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs']
             jcr:uuid: b308644a-aa7c-43f7-9592-824e00693bfe
             hippo:availability: [preview]
             hippostd:state: unpublished
@@ -161,7 +161,7 @@
             myproject:title: Automatically populated Index Title
           /index[3]:
             jcr:primaryType: myproject:index
-            jcr:mixinTypes: ['mix:referenceable']
+            jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
             jcr:uuid: 7cf82579-1c06-4e9b-9dd7-b78d0dbc14bc
             hippo:availability: [live]
             hippostd:state: published

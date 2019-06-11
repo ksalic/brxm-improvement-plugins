@@ -1,0 +1,50 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:types/myproject:faqitem:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: FAQ Item
+        myproject:answer: Answer
+        myproject:question: Question
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: FAQ Item
+        myproject:answer: Antwoord
+        myproject:question: Vraag
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Élément de FAQ
+        myproject:answer: Réponse
+        myproject:question: Question
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: FAQ-Item
+        myproject:answer: Antwort
+        myproject:question: Frage
+    /hippo:configuration/hippo:translations/hippo:types/myproject:faqlist:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: FAQ List
+        myproject:description: Description
+        myproject:faqitem: FAQ items
+        myproject:title: Title
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: FAQ Lijst
+        myproject:description: Beschrijving
+        myproject:faqitem: FAQ items
+        myproject:title: Titel
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Liste de FAQ
+        myproject:description: Description
+        myproject:faqitem: Éléments de FAQ
+        myproject:title: Titre
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: FAQ-Liste
+        myproject:description: Beschreibung
+        myproject:faqitem: FAQ-Items
+        myproject:title: Titel

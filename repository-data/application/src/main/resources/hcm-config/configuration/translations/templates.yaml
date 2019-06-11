@@ -3,12 +3,28 @@ definitions:
     /hippo:configuration/hippo:translations/hippo:templates/de:
       new-resource-bundle: Neues Resource-Bundle
       new-untranslated-folder: Neuer nicht übersetzter Ordner
+      new-faq-item-folder: Neues FAQ-Item-Ordner
+      new-faq-list: Neue FAQ-Liste
+      new-faq-item: Neues FAQ-Item
+      new-faq-list-document-folder: Neuer FAQ-Listen-Ordner
     /hippo:configuration/hippo:translations/hippo:templates/en:
       new-resource-bundle: new resource bundle
       new-untranslated-folder: new untranslated folder
+      new-faq-item-folder: new FAQ item folder
+      new-faq-list: new FAQ list
+      new-faq-item: new FAQ item
+      new-faq-list-document-folder: new FAQ list folder
     /hippo:configuration/hippo:translations/hippo:templates/fr:
       new-resource-bundle: nouveau resource bundle
       new-untranslated-folder: nouveau dossier non traduit
+      new-faq-item-folder: nouveau dossier élément FAQ
+      new-faq-list: nouvelle liste FAQ
+      new-faq-item: nouvel élément FAQ
+      new-faq-list-document-folder: nouveau dossier liste FAQ
     /hippo:configuration/hippo:translations/hippo:templates/nl:
       new-resource-bundle: nieuwe resource bundle
       new-untranslated-folder: nieuwe onvertaalde map
+      new-faq-item-folder: nieuwe FAQ item map
+      new-faq-list: nieuwe FAQ lijst
+      new-faq-item: nieuw FAQ item
+      new-faq-list-document-folder: nieuwe FAQ lijst map

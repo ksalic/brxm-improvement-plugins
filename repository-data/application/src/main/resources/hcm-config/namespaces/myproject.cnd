@@ -10,6 +10,12 @@
 [myproject:article] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
   orderable
 
+[myproject:faqitem] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
+  orderable
+
+[myproject:faqlist] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
+  orderable
+
 [myproject:index] > hippostd:relaxed, hippotranslation:translated, myproject:basedocument
   orderable
 

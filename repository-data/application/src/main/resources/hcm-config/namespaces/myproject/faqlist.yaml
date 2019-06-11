@@ -1,0 +1,130 @@
+definitions:
+  config:
+    /hippo:namespaces/myproject/faqlist:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: d68e251e-a299-4813-8073-7702269dd437
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: c8a30a4a-0bb6-49cb-8d7a-327e3d9f0d40
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
+          jcr:uuid: 8bfa6682-14a7-4581-a59a-d6630a41123b
+          hipposysedit:node: true
+          hipposysedit:supertype: ['myproject:basedocument', 'hippotranslation:translated',
+            'relateddocs:relatabledocs', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: myproject:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [non-empty, required]
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: myproject:description
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
+          /faqitem:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: myproject:faqitem
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: myproject:faqlist
+          jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
+          jcr:uuid: fbaf004b-d172-41af-b5de-6e3b739feb58
+          hippo:related___pathreference: []
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2014-06-20T11:16:58.810+02:00
+          hippostdpubwf:lastModificationDate: 2014-06-20T11:16:58.810+02:00
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          myproject:title: ''
+          /myproject:description:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /myproject:faqitem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /title:
+            jcr:primaryType: frontend:plugin
+            field: title
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /description:
+            jcr:primaryType: frontend:plugin
+            field: description
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /faqitem:
+            jcr:primaryType: frontend:plugin
+            field: faqitem
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            caption: ''
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              cluster.name: cms-pickers/faq-only
+          /relateddocs:
+            jcr:primaryType: frontend:plugin
+            browser.id: service.browse
+            caption: Related documents
+            engine: ${engine}
+            mode: ${mode}
+            plugin.class: org.onehippo.forge.relateddocs.editor.RelatedDocsPlugin
+            search.paths: /content/documents/comet
+            template.size: ''
+            wicket.id: ${cluster.id}.field
+            wicket.model: ${wicket.model}
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              cluster.name: cms-pickers/faq-only
+              nodetypes: ['myproject:faqitem']
+          /relateddocssuggest:
+            jcr:primaryType: frontend:plugin
+            browser.id: service.browse
+            caption: Related documents suggestion
+            engine: ${engine}
+            mode: ${mode}
+            numberOfSuggestions: 10
+            plugin.class: org.onehippo.forge.relateddocs.editor.RelatedDocsSuggestPlugin
+            template.size: ''
+            wicket.id: ${cluster.id}.field
+            wicket.model: ${wicket.model}
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              cluster.name: cms-pickers/faq-only
+              nodetypes: ['myproject:faqitem']

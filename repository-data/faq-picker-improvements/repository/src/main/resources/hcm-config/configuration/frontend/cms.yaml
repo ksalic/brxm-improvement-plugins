@@ -1,0 +1,188 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:frontend/cms/cms-tree-views/faq:
+      jcr:primaryType: frontend:plugincluster
+      frontend:properties: [use.width.from.classname, bind.to.layout.unit, workflow.enabled,
+        nodetypes, root.path]
+      frontend:references: [browser.id, editor.id]
+      frontend:services: [wicket.id, model.folder]
+      model.folder: ${cluster.id}.model.folder
+      nodetypes: []
+      root.path: /content/documents
+      /sectionPlugin:
+        jcr:primaryType: frontend:plugin
+        extension.addfolder: ${cluster.id}.addfolder
+        extension.tree: ${cluster.id}.tree
+        model.folder.root: ${root.path}
+        plugin.class: org.hippoecm.frontend.plugins.cms.browse.section.SearchingSectionPlugin
+        title: section-documents
+        wicket.extensions: [extension.tree, extension.addfolder]
+      /documentsBrowser:
+        jcr:primaryType: frontend:plugin
+        path: ${root.path}
+        plugin.class: org.hippoecm.frontend.plugins.cms.browse.tree.FolderTreePlugin
+        rootless: 'true'
+        wicket.id: ${cluster.id}.tree
+        wicket.model: ${model.folder}
+        /module.workflow:
+          jcr:primaryType: frontend:plugin
+          plugin.class: org.hippoecm.addon.workflow.ContextWorkflowManagerPlugin
+          workflow.categories: [threepane, folder-translations]
+        /filters:
+          jcr:primaryType: frontend:pluginconfig
+          /hideAdministration:
+            jcr:primaryType: frontend:pluginconfig
+            display: false
+            path: /content/documents/administration
+          /showFolderType:
+            jcr:primaryType: frontend:pluginconfig
+            child: hippostd:folder
+            display: true
+          /showDirectoryType:
+            jcr:primaryType: frontend:pluginconfig
+            child: hippostd:directory
+            display: true
+          /hideHandleType:
+            jcr:primaryType: frontend:pluginconfig
+            child: hippo:handle
+            display: false
+          /hideResultsetType:
+            jcr:primaryType: frontend:pluginconfig
+            child: hippo:facetresult
+            display: false
+          /hideFacNavType:
+            jcr:primaryType: frontend:pluginconfig
+            child: hippofacnav:facetnavigation
+            display: false
+          /hideTranslationsType:
+            jcr:primaryType: frontend:pluginconfig
+            child: hippotranslation:translations
+            display: false
+          /hideAdministration[2]:
+            jcr:primaryType: frontend:pluginconfig
+            display: false
+            path: /content/documents/administration
+      /addfolderPlugin:
+        jcr:primaryType: frontend:plugin
+        option.location: /content/documents
+        plugin.class: org.hippoecm.frontend.plugins.standardworkflow.FolderShortcutPlugin
+        wicket.id: ${cluster.id}.addfolder
+        wicket.variant: addfolder
+        workflow.categories: threepane
+        workflow.translated: new-translated-folder
+    /hippo:configuration/hippo:frontend/cms/cms-pickers/faq-only:
+      jcr:primaryType: frontend:plugincluster
+      frontend:properties: [nodetypes, root.path, root.paths]
+      frontend:services: [wicket.id, wicket.model, model.folder]
+      root.path: /content/documents
+      root.paths: [/content/documents]
+      /navigator:
+        jcr:primaryType: frontend:plugin
+        browser.id: ${cluster.id}.browser
+        browser.viewers: cms-folder-faq-views
+        extension.list: service.dialog.list
+        model.default.path: /content
+        model.document: ${wicket.model}
+        plugin.class: org.hippoecm.frontend.plugins.cms.browse.Navigator
+        search.viewers: cms-search-views
+        section.documents: service.dialog.tree.content
+        sections: [section.documents]
+        wicket.variant: picker
+        /browser.options:
+          jcr:primaryType: frontend:pluginconfig
+          list.page.size: '10'
+          list.view.size: '8'
+        /yui.config.accordion:
+          jcr:primaryType: frontend:pluginconfig
+          ancestor.classname: hippo-picker
+          register.render.listener: false
+          register.resize.listener: false
+      /documentsTreeLoader:
+        jcr:primaryType: frontend:plugin
+        cluster.name: cms-tree-views/faq
+        plugin.class: org.hippoecm.frontend.plugin.loader.PluginClusterLoader
+        /cluster.config:
+          jcr:primaryType: frontend:pluginconfig
+          bind.to.layout.unit: false
+          use.width.from.classname: hippo-picker-tree
+          wicket.id: service.dialog.tree.content
+          workflow.enabled: false
+    /hippo:configuration/hippo:frontend/cms/cms-folder-faq-views:
+      jcr:primaryType: frontend:clusterlist
+      /hippostd:folder:
+        jcr:primaryType: frontend:plugincluster
+        frontend:properties: [list.page.size, list.view.size, document.type.show]
+        frontend:references: [model.folder, model.document]
+        frontend:services: [wicket.id]
+        list.page.size: '50'
+        list.view.size: '5'
+        /root:
+          jcr:primaryType: frontend:plugin
+          column.id: ${cluster.id}.columns
+          expand.collapse.supported: true
+          plugin.class: org.hippoecm.frontend.plugins.cms.browse.list.FolderViewPlugin
+          wicket.model: ${model.folder}
+          /filters:
+            jcr:primaryType: frontend:pluginconfig
+            /hideAdministration:
+              jcr:primaryType: frontend:pluginconfig
+              display: false
+              path: /content/documents/administration
+            /hideAttic:
+              jcr:primaryType: frontend:pluginconfig
+              display: false
+              path: /content/attic
+            /showFaqItemType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippo:handle
+              display: true
+              subchild: myproject:faqitem
+            /hideHandleType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippo:handle
+              display: false
+            /hideGalleryType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippostd:gallery
+              display: false
+            /showFolderType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippostd:folder
+              display: true
+            /showDirectoryType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippostd:directory
+              display: true
+            /hideFacetSearchType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippo:facetsearch
+              display: false
+            /hideUnstructuredType:
+              jcr:primaryType: frontend:pluginconfig
+              child: nt:unstructured
+              display: false
+            /hideTranslation:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippo:translation
+              display: false
+            /hideFacNavType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippofacnav:facetnavigation
+              display: false
+            /hideTranslationsType:
+              jcr:primaryType: frontend:pluginconfig
+              child: hippotranslation:translations
+              display: false
+        /defaultColumns:
+          jcr:primaryType: frontend:plugin
+          column.id: ${cluster.id}.columns
+          documentTypeIconRenderer: resourceIconRenderer
+          plugin.class: org.hippoecm.frontend.plugins.cms.browse.list.DefaultListColumnProviderPlugin
+        /reviewedActionColumns:
+          jcr:primaryType: frontend:plugin
+          column.id: ${cluster.id}.columns
+          plugin.class: org.hippoecm.frontend.plugins.reviewedactions.list.ReviewedActionsListColumnProviderPlugin
+        /translationColumns:
+          jcr:primaryType: frontend:plugin
+          column.id: ${cluster.id}.columns
+          plugin.class: org.hippoecm.frontend.translation.list.TranslationsColumnProviderPlugin

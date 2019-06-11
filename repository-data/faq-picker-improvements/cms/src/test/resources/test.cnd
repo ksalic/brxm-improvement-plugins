@@ -1,0 +1,9 @@
+<'test'='http://www.test.com/test/nt/1.0'>
+<'hippo'='http://www.onehippo.org/jcr/hippo/nt/2.0.4'>
+
+[test:basedocument] > hippo:document
+  orderable
+
+[test:faqitem] > test:basedocument
+  orderable
+

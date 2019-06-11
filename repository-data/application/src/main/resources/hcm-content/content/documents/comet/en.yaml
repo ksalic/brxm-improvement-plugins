@@ -21,7 +21,7 @@
       hippo:versionHistory: dc4fa01b-5f3f-4a90-8e83-a375bc3b9fc2
       /index[1]:
         jcr:primaryType: myproject:index
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
         jcr:uuid: 791b9610-1b7c-43e7-b3be-8df879ee637c
         hippo:availability: []
         hippostd:state: draft
@@ -35,7 +35,7 @@
         myproject:title: Automatically populated Index Title
       /index[2]:
         jcr:primaryType: myproject:index
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs']
         jcr:uuid: df738263-b42b-4ce2-b000-864b1c815dd9
         hippo:availability: [preview]
         hippostd:state: unpublished
@@ -49,7 +49,7 @@
         myproject:title: Automatically populated Index Title
       /index[3]:
         jcr:primaryType: myproject:index
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
         jcr:uuid: 28e69af0-7d8d-41b3-8fc7-6f103efa211b
         hippo:availability: [live]
         hippostd:state: published
@@ -77,7 +77,7 @@
         hippo:versionHistory: dd034331-781d-4728-b952-195791d325b6
         /index[1]:
           jcr:primaryType: myproject:index
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
           jcr:uuid: 349cf787-62ce-4798-91e4-73752dcb9d2b
           hippo:availability: []
           hippostd:state: draft
@@ -91,7 +91,7 @@
           myproject:title: Automatically populated Index Title
         /index[2]:
           jcr:primaryType: myproject:index
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs']
           jcr:uuid: 512f61bf-c377-4c15-b57f-8d79bea5fbbc
           hippo:availability: [preview]
           hippostd:state: unpublished
@@ -105,7 +105,7 @@
           myproject:title: Automatically populated Index Title
         /index[3]:
           jcr:primaryType: myproject:index
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
           jcr:uuid: f788e3d6-3e35-44b3-a846-1564fab8b62a
           hippo:availability: [live]
           hippostd:state: published
@@ -133,35 +133,44 @@
           hippo:versionHistory: baf1da16-7ee9-4555-8b7b-936105e9eeba
           /index[1]:
             jcr:primaryType: myproject:index
-            jcr:mixinTypes: ['mix:referenceable']
+            jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
             jcr:uuid: 3f82efd9-284f-4ceb-bc9f-22103840b446
             hippo:availability: []
+            hippostd:holder: admin
             hippostd:state: draft
             hippostdpubwf:createdBy: system
             hippostdpubwf:creationDate: 2019-05-27T19:47:21.810+02:00
-            hippostdpubwf:lastModificationDate: 2019-05-27T19:47:21.810+02:00
-            hippostdpubwf:lastModifiedBy: system
+            hippostdpubwf:lastModificationDate: 2019-06-11T13:41:07.409+02:00
+            hippostdpubwf:lastModifiedBy: admin
             hippotranslation:id: 11bb8333-dadb-4b5f-987f-b02ac89af618
             hippotranslation:locale: en
             myproject:overview: <p>Automatically populated Index Overview</p>
             myproject:title: Automatically populated Index Title
+            /relateddocs:docs:
+              jcr:primaryType: relateddocs:docs
+              /relateddocs:reldoc:
+                jcr:primaryType: hippo:facetselect
+                hippo:docbase: 5a2a31e9-50c0-452b-8be1-299bea0ee900
+                hippo:facets: []
+                hippo:modes: []
+                hippo:values: []
           /index[2]:
             jcr:primaryType: myproject:index
-            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs']
             jcr:uuid: 55775b2b-0d56-4ee6-818d-d9291a79e282
             hippo:availability: [preview]
             hippostd:state: unpublished
             hippostdpubwf:createdBy: system
             hippostdpubwf:creationDate: 2019-05-27T19:47:21.810+02:00
-            hippostdpubwf:lastModificationDate: 2019-05-27T19:47:21.857+02:00
-            hippostdpubwf:lastModifiedBy: system
+            hippostdpubwf:lastModificationDate: 2019-06-11T13:41:06.141+02:00
+            hippostdpubwf:lastModifiedBy: admin
             hippotranslation:id: 11bb8333-dadb-4b5f-987f-b02ac89af618
             hippotranslation:locale: en
             myproject:overview: <p>Automatically populated Index Overview</p>
             myproject:title: Automatically populated Index Title
           /index[3]:
             jcr:primaryType: myproject:index
-            jcr:mixinTypes: ['mix:referenceable']
+            jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
             jcr:uuid: bf75db7c-c5e4-4434-b7f5-89608c8b2f8c
             hippo:availability: [live]
             hippostd:state: published
@@ -233,6 +242,165 @@
                 hippotranslation:id: f3061c00-57f1-4ab2-9d36-f94446e4f657
                 hippotranslation:locale: en
                 myproject:title: Deeper Article
+          /test:
+            jcr:primaryType: hippo:handle
+            jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+            jcr:uuid: 57de0e0e-ab1c-4951-9474-1e80453b014b
+            hippo:versionHistory: cc67879b-d4dc-4902-9448-ae7f5d0428a2
+            /test[1]:
+              jcr:primaryType: myproject:faqitem
+              jcr:mixinTypes: ['mix:referenceable', 'uidgeneration:identifable']
+              jcr:uuid: cf2b7bbb-da99-46aa-88bd-422831f7ad3a
+              hippo:availability: []
+              hippo:related___pathreference: []
+              hippostd:state: draft
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-03T13:25:16.356+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-03T13:25:16.356+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: 37a7188a-0473-4310-aeb2-ac1ca5b93863
+              hippotranslation:locale: en
+              myproject:question: ''
+              uidgeneration:id: '00000001'
+              /myproject:answer:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
+            /test[2]:
+              jcr:primaryType: myproject:faqitem
+              jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'uidgeneration:identifable']
+              jcr:uuid: 355ab5ad-ab9d-4af1-9335-dc8094cdc49d
+              hippo:availability: [preview]
+              hippo:related___pathreference: []
+              hippostd:state: unpublished
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-03T13:25:16.356+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-03T13:25:20.337+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: 37a7188a-0473-4310-aeb2-ac1ca5b93863
+              hippotranslation:locale: en
+              myproject:question: ''
+              uidgeneration:id: '00000001'
+              /myproject:answer:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
+            /test[3]:
+              jcr:primaryType: myproject:faqitem
+              jcr:mixinTypes: ['mix:referenceable', 'uidgeneration:identifable']
+              jcr:uuid: 6ec7c836-a598-4d5b-9a1e-2f85471b2f3f
+              hippo:availability: [live]
+              hippo:related___pathreference: []
+              hippostd:state: published
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-03T13:25:16.356+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-03T13:25:20.337+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippostdpubwf:publicationDate: 2019-06-03T13:25:23.388+02:00
+              hippotranslation:id: 37a7188a-0473-4310-aeb2-ac1ca5b93863
+              hippotranslation:locale: en
+              myproject:question: ''
+              uidgeneration:id: '00000001'
+              /myproject:answer:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
+          /faqlist:
+            jcr:primaryType: hippo:handle
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 6c8c90cc-c085-4701-8b84-c5d4657d51e5
+            /faqlist[1]:
+              jcr:primaryType: myproject:faqlist
+              jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs', 'uidgeneration:identifable']
+              jcr:uuid: 263a706a-77d1-4286-ad7e-cd308e1e49be
+              hippo:availability: []
+              hippo:related___pathreference: []
+              hippostd:holder: admin
+              hippostd:state: draft
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-03T13:33:03.761+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-11T14:45:30.439+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: 54a56b29-7d5d-442e-8e1e-aed1d50f79f2
+              hippotranslation:locale: en
+              myproject:title: sdfsdf
+              uidgeneration:id: '00000002'
+              /myproject:description:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
+              /myproject:faqitem:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 57de0e0e-ab1c-4951-9474-1e80453b014b
+              /relateddocs:docs:
+                jcr:primaryType: relateddocs:docs
+                /relateddocs:reldoc[1]:
+                  jcr:primaryType: hippo:facetselect
+                  hippo:docbase: 57de0e0e-ab1c-4951-9474-1e80453b014b
+                  hippo:facets: []
+                  hippo:modes: []
+                  hippo:values: []
+                /relateddocs:reldoc[2]:
+                  jcr:primaryType: hippo:facetselect
+                  hippo:docbase: c5313b76-4378-4ae1-8bb9-5ad0307f9f9a
+                  hippo:facets: []
+                  hippo:modes: []
+                  hippo:values: []
+            /faqlist[2]:
+              jcr:primaryType: myproject:faqlist
+              jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'relateddocs:relatabledocs',
+                'uidgeneration:identifable']
+              jcr:uuid: cf3cfe2b-cf84-4751-9f9d-3bac50c8fa73
+              hippo:availability: [preview]
+              hippo:related___pathreference: []
+              hippostd:state: unpublished
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-03T13:33:03.761+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-11T14:44:06.824+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: 54a56b29-7d5d-442e-8e1e-aed1d50f79f2
+              hippotranslation:locale: en
+              myproject:title: sdfsdf
+              uidgeneration:id: '00000002'
+              /myproject:description:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
+              /myproject:faqitem:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 57de0e0e-ab1c-4951-9474-1e80453b014b
+              /relateddocs:docs:
+                jcr:primaryType: relateddocs:docs
+                /relateddocs:reldoc[1]:
+                  jcr:primaryType: hippo:facetselect
+                  hippo:docbase: 57de0e0e-ab1c-4951-9474-1e80453b014b
+                  hippo:facets: []
+                  hippo:modes: []
+                  hippo:values: []
+                /relateddocs:reldoc[2]:
+                  jcr:primaryType: hippo:facetselect
+                  hippo:docbase: c5313b76-4378-4ae1-8bb9-5ad0307f9f9a
+                  hippo:facets: []
+                  hippo:modes: []
+                  hippo:values: []
+          /test2:
+            jcr:primaryType: hippo:handle
+            jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+            jcr:uuid: c5313b76-4378-4ae1-8bb9-5ad0307f9f9a
+            hippo:name: test2
+            /test2:
+              jcr:primaryType: myproject:faqitem
+              jcr:mixinTypes: ['mix:versionable', 'uidgeneration:identifable']
+              jcr:uuid: 37eab5b6-1185-48b7-89fc-aed05fcea17d
+              hippo:availability: [preview]
+              hippo:related___pathreference: []
+              hippostd:state: unpublished
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-03T13:25:16.356+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-03T13:25:20.337+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: 197e8742-88df-43b8-8cbc-f59a26f723b4
+              hippotranslation:locale: en
+              myproject:question: ''
+              uidgeneration:id: '00000001'
+              /myproject:answer:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
         /article:
           jcr:primaryType: hippo:handle
           jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']

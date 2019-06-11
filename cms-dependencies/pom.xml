@@ -16,6 +16,21 @@
       <artifactId>myproject-repository-data-uid-generation</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.example</groupId>-->
+      <!--<artifactId>myproject-repository-data-faq-picker-improvements-cms</artifactId>-->
+      <!--<version>${project.version}</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>myproject-repository-data-faq-picker-improvements-repository</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>myproject-repository-data-related-docs-improvements</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.example</groupId>

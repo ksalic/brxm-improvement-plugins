@@ -11,9 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: e3e10b42-5b98-4ca6-91aa-c4df79c78e94
+          jcr:uuid: a2a534cd-0d3c-4352-be17-f9a601a032b8
           hipposysedit:node: true
-          hipposysedit:supertype: ['myproject:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:supertype: ['myproject:basedocument', 'hippotranslation:translated',
+            'relateddocs:relatabledocs', 'hippostd:relaxed']
           hipposysedit:uri: http://www.myproject.com/myproject/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -41,10 +42,10 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable', 'relateddocs:relatabledocs']
           myproject:title: ''
           myproject:overview: ''
-          jcr:uuid: 3880df2d-33f4-4ff7-8095-492b2398da59
+          jcr:uuid: 0d48db8f-6a7d-42b7-9035-4d9332107f4a
           hippostdpubwf:lastModificationDate: 2019-05-22T15:01:45.281+01:00
           hippostdpubwf:creationDate: 2019-05-22T15:01:45.282+01:00
       /editor:templates:

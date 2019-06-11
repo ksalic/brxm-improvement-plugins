@@ -28,3 +28,10 @@ definitions:
           jcr:primaryType: hst:containercomponent
           hst:label: Page-Not-Found Main
           hst:xtype: hst.vbox
+      /faqlist:
+        jcr:primaryType: hst:containercomponentfolder
+        /main:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:containercomponent
+          hst:label: Faq Main
+          hst:xtype: hst.vbox

@@ -38,3 +38,16 @@ definitions:
             jcr:primaryType: hst:sitemapitem
             hst:componentconfigurationid: hst:pages/categorypage
             hst:relativecontentpath: ${parent}/index
+      /faq:
+        jcr:primaryType: hst:sitemapitem
+        hst:componentconfigurationid: hst:pages/faqlist
+        hst:pagetitle: List of FAQ's
+        hst:relativecontentpath: faq
+        /_any_.html:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/faqpage
+          hst:relativecontentpath: ${parent}/${1}
+        /_default_.html:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/faqlist
+          hst:relativecontentpath: ${parent}/${1}
