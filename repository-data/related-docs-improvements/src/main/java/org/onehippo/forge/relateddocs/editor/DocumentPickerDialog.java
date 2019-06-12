@@ -49,7 +49,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author vijaykiran
+ * @author vijaykiran https://issues.onehippo.com/browse/HIPPLUG-1546
  */
 public class DocumentPickerDialog extends AbstractDialog<Node> {
     protected static final String CLUSTER_OPTIONS = "cluster.options";

@@ -56,7 +56,7 @@ import static org.hippoecm.frontend.service.IEditor.Mode;
 import static org.onehippo.forge.relateddocs.RelatedDocsNodeType.NT_RELATEDDOCS;
 
 /**
- * The RelatedDocsPlugin renders the chosen related documents
+ * The RelatedDocsPlugin renders the chosen related documents https://issues.onehippo.com/browse/HIPPLUG-1546
  */
 public class RelatedDocsPlugin extends AbstractRelatedDocsPlugin {
     private static final long serialVersionUID = 1L;
