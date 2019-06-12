@@ -582,19 +582,19 @@ definitions:
         \ variant=\"published\" applyPublished=\"true\" availabilities=\"live\"/>\r\
         \n            <!-- create a JCR version of the published document via the\
         \ unpublished variant -->\r\n            <hippo:version variant=\"unpublished\"\
-        \ trigger=\"publication\"/>\r\n          </if>\r\n        </transition>\r\n\
-        \      </state>\r\n    </state>\r\n\r\n    <state id=\"depublish-branch\"\
-        >\r\n      <onentry>\r\n        <if cond=\"workflowContext.isGranted(unpublished\
-        \ ?: published ?: draft, 'hippo:editor')\">\r\n          <hippo:action action=\"\
-        depublishBranch\" enabledExpr=\"false\"/>\r\n        </if>\r\n      </onentry>\r\
-        \n      <state id=\"no-depublish-branch\">\r\n        <!-- event-less transition\
-        \ to 'can-depublish-branch' state -->\r\n        <transition target=\"can-depublish-branch\"\
-        \ cond=\"live and branchExists\"/>\r\n      </state>\r\n\r\n      <state id=\"\
-        can-depublish-branch\">\r\n        <onentry>\r\n          <!-- if the workflow\
-        \ is for master, the depublishBranch is only enabled when there is no request\
-        \ pending\r\n          or it is invoked by the workflow user -->\r\n     \
-        \     <if cond=\"((!requestPending or user=='workflowuser') and master) ||\
-        \ notMaster\">\r\n            <if cond=\"workflowContext.isGranted(unpublished\
+        \ trigger=\"publication\"/>\r\n<hippo:taxonomyFolderCreation event=\"_event.data\"\
+        />\r\n          </if>\r\n        </transition>\r\n      </state>\r\n    </state>\r\
+        \n\r\n    <state id=\"depublish-branch\">\r\n      <onentry>\r\n        <if\
+        \ cond=\"workflowContext.isGranted(unpublished ?: published ?: draft, 'hippo:editor')\"\
+        >\r\n          <hippo:action action=\"depublishBranch\" enabledExpr=\"false\"\
+        />\r\n        </if>\r\n      </onentry>\r\n      <state id=\"no-depublish-branch\"\
+        >\r\n        <!-- event-less transition to 'can-depublish-branch' state -->\r\
+        \n        <transition target=\"can-depublish-branch\" cond=\"live and branchExists\"\
+        />\r\n      </state>\r\n\r\n      <state id=\"can-depublish-branch\">\r\n\
+        \        <onentry>\r\n          <!-- if the workflow is for master, the depublishBranch\
+        \ is only enabled when there is no request pending\r\n          or it is invoked\
+        \ by the workflow user -->\r\n          <if cond=\"((!requestPending or user=='workflowuser')\
+        \ and master) || notMaster\">\r\n            <if cond=\"workflowContext.isGranted(unpublished\
         \ ?: published ?: draft, 'hippo:editor')\">\r\n              <hippo:action\
         \ action=\"depublishBranch\" enabledExpr=\"true\"/>\r\n            </if>\r\
         \n          </if>\r\n        </onentry>\r\n        <transition event=\"depublishBranch\"\
@@ -719,3 +719,7 @@ definitions:
         \ />\r\n      </transition>\r\n    </state>\r\n\r\n  </parallel>\r\n\r\n \
         \ <!-- the final terminated state is used when the document no longer exists,\
         \ is renamed or moved -->\r\n  <final id=\"terminated\" />\r\n\r\n</scxml>"
+      /taxonomyFolderCreation:
+        jcr:primaryType: hipposcxml:action
+        hipposcxml:classname: com.bloomreach.cms.workflow.TaxonomyFolderCreationAction
+        hipposcxml:namespace: http://www.onehippo.org/cms7/repository/scxml

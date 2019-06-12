@@ -31,6 +31,11 @@
       <artifactId>myproject-repository-data-related-docs-improvements</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.example</groupId>
+      <artifactId>myproject-repository-data-taxonomy-folder-creation</artifactId>
+      <version>${project.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.example</groupId>

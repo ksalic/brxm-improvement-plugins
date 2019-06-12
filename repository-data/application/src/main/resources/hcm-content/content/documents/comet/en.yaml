@@ -401,6 +401,46 @@
               /myproject:answer:
                 jcr:primaryType: hippostd:html
                 hippostd:content: ''
+          /faqi:
+            jcr:primaryType: hippo:handle
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 89c91e9b-a8f7-4993-820a-12f436287bca
+            /faqi[1]:
+              jcr:primaryType: myproject:faqitem
+              jcr:mixinTypes: ['mix:referenceable', 'uidgeneration:identifable']
+              jcr:uuid: 20625795-8625-4750-bc95-da2b495972fa
+              hippo:availability: []
+              hippo:related___pathreference: []
+              hippostd:state: draft
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-12T09:30:38.683+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-12T09:30:38.684+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: c7340a54-7959-4c77-ba92-002e4c1e9fb3
+              hippotranslation:locale: en
+              myproject:question: ''
+              uidgeneration:id: '00000001'
+              /myproject:answer:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
+            /faqi[2]:
+              jcr:primaryType: myproject:faqitem
+              jcr:mixinTypes: ['mix:referenceable', 'mix:versionable', 'uidgeneration:identifable']
+              jcr:uuid: a9130392-af0b-474c-9923-9fb94aeaaf3f
+              hippo:availability: [preview]
+              hippo:related___pathreference: []
+              hippostd:state: unpublished
+              hippostdpubwf:createdBy: admin
+              hippostdpubwf:creationDate: 2019-06-12T09:30:38.683+02:00
+              hippostdpubwf:lastModificationDate: 2019-06-12T09:30:44.161+02:00
+              hippostdpubwf:lastModifiedBy: admin
+              hippotranslation:id: c7340a54-7959-4c77-ba92-002e4c1e9fb3
+              hippotranslation:locale: en
+              myproject:question: ''
+              uidgeneration:id: '00000001'
+              /myproject:answer:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
         /article:
           jcr:primaryType: hippo:handle
           jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']

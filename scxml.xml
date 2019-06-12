@@ -463,6 +463,7 @@
         <!-- target-less transition to publish the document when no event payload parameter targetDate is provided -->
         <transition event="publish" cond="!_event.data?.targetDate">
           <!-- this will publish 'master' because no 'branchId' provided -->
+          <hippo:taxonomyFolderCreation event="_event.data"/>
           <send event="'publishBranch'"/>
         </transition>
 

@@ -60,9 +60,9 @@ public class TaxonomyWorkflowListener implements DaemonModule {
 
     @Subscribe
     public void handleEvent(final HippoWorkflowEvent event) {
-        if (event.success() && PUBLICATION_INTERACTION.equals(event.interaction())) {
-            postPublish(event);
-        }
+//        if (event.success() && PUBLICATION_INTERACTION.equals(event.interaction())) {
+//            postPublish(event);
+//        }
     }
 
     private void postPublish(final HippoWorkflowEvent workflowEvent) {

@@ -3,7 +3,7 @@
   /topics:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:versionInfo']
-    hippo:versionHistory: 1739c175-1c6f-4097-bd50-bc8eae17b3d8
+    hippo:versionHistory: 3e7af949-47e2-4282-9a49-9bc6e7231009
     /topics[1]:
       jcr:primaryType: hippotaxonomy:taxonomy
       jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
@@ -13,9 +13,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2019-05-23T09:48:24.101+01:00
-      hippostdpubwf:lastModificationDate: 2019-05-27T18:44:38.520+02:00
+      hippostdpubwf:lastModificationDate: 2019-06-12T11:46:24.031+02:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2019-05-27T19:50:56.825+02:00
+      hippostdpubwf:publicationDate: 2019-06-12T11:46:26.692+02:00
       hippotaxonomy:locales: [en, fr]
       /account-maintenance-fr:
         jcr:primaryType: hippotaxonomy:category
@@ -59,7 +59,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2019-05-23T09:48:24.101+01:00
-      hippostdpubwf:lastModificationDate: 2019-05-27T18:44:38.520+02:00
+      hippostdpubwf:lastModificationDate: 2019-06-12T11:46:24.031+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotaxonomy:locales: [en, fr]
       /account-maintenance-fr:
@@ -101,11 +101,10 @@
       jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
       jcr:uuid: bd8de8af-14cc-4ebf-b6db-3abede90cd8f
       hippo:availability: []
-      hippostd:holder: admin
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2019-05-23T09:48:24.101+01:00
-      hippostdpubwf:lastModificationDate: 2019-06-03T11:43:25.929+02:00
+      hippostdpubwf:lastModificationDate: 2019-06-12T11:36:04.176+02:00
       hippostdpubwf:lastModifiedBy: admin
       hippotaxonomy:locales: [en, fr]
       /account-maintenance-fr:

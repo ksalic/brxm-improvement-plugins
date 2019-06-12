@@ -17,6 +17,7 @@
     <module>uid-generation</module>
     <module>related-docs-improvements</module>
     <module>faq-picker-improvements</module>
+    <module>taxonomy-folder-creation</module>
     <module>application</module>
     <module>development</module>
     <module>site</module>
